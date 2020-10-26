@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CounterApp</string>
+    <string name="btn_reset">RESET</string>
+    <string name="btn_down">DOWN</string>
+    <string name="btn_up">UP</string>
+    <string name="number">0</string>
 </resources>
