@@ -2,7 +2,6 @@ package com.wahyuandhi.counterapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -18,8 +17,13 @@ class MainActivity : AppCompatActivity() {
         val tvResult = findViewById<TextView>(R.id.tv_result)
         val btnUp = findViewById<Button>(R.id.btn_up)
         val btnDown = findViewById<Button>(R.id.btn_down)
+        val linLay = findViewById<LinearLayout>(R.id.linlay)
 
         btnReset.setOnClickListener {
+            val tvHistory = TextView(this)
+            tvHistory.text = values.toString()
+            tvHistory.textSize = 30F
+            linLay.addView(tvHistory)
             reset()
             tvResult.text = values.toString()
         }
